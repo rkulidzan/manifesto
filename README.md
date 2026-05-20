@@ -2,7 +2,7 @@
 
 A free, fillable manifesto template created by [Rebekah Kulidzan](https://rkulidzan.com).
 
-Built as a companion to the blog post [The Manifesto](https://rkulidzan.com/blog/) — on why writing one matters, especially during career transitions.
+Built as a companion to the blog post [The Manifesto](https://rkulidzan.com/blog/) on why writing one matters, especially during career transitions.
 
 ## What it is
 
