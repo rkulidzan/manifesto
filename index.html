@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Manifesto — Template by Rebekah Kulidzan</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.8;
+      padding: 64px 24px;
+      font-size: 15px;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .byline {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 52px;
+    }
+
+    .byline a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .byline a:hover {
+      color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 60px;
+      line-height: 1.7;
+    }
+
+    .section {
+      margin-bottom: 56px;
+      border-top: 1px solid #ebebeb;
+      padding-top: 36px;
+    }
+
+    h2 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.45;
+      color: #1a1a1a;
+    }
+
+    .guidance {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+
+    .write-here {
+      width: 100%;
+      min-height: 130px;
+      border: none;
+      border-bottom: 1px solid #d8d8d8;
+      background: transparent;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      resize: vertical;
+      padding: 8px 0 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .write-here::placeholder {
+      color: #ccc;
+    }
+
+    .write-here:focus {
+      border-bottom-color: #1a1a1a;
+    }
+
+    .commitments-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .commitment-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .commitment-num {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 12px;
+      color: #bbb;
+      min-width: 20px;
+    }
+
+    .commitment-input {
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid #d8d8d8;
+      background: transparent;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      padding: 4px 0 8px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .commitment-input::placeholder {
+      color: #ccc;
+    }
+
+    .commitment-input:focus {
+      border-bottom-color: #1a1a1a;
+    }
+
+    .date-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .date-label {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .date-input {
+      border: none;
+      border-bottom: 1px solid #d8d8d8;
+      background: transparent;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      color: #1a1a1a;
+      padding: 4px 0 8px;
+      outline: none;
+      width: 220px;
+      transition: border-color 0.2s;
+    }
+
+    .date-input:focus {
+      border-bottom-color: #1a1a1a;
+    }
+
+    .print-btn {
+      display: inline-block;
+      margin-top: 52px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      border: 1px solid #ddd;
+      padding: 11px 22px;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.15s;
+    }
+
+    .print-btn:hover {
+      color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+
+    .footer {
+      margin-top: 72px;
+      padding-top: 28px;
+      border-top: 1px solid #ebebeb;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+      color: #bbb;
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: #bbb;
+      text-decoration: none;
+      border-bottom: 1px solid #e5e5e5;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .footer a:hover {
+      color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 40px 20px; font-size: 14px; }
+      h1 { font-size: 22px; }
+      .question { font-size: 15px; }
+    }
+
+    @media print {
+      body { background: white; padding: 32px 0; }
+      .print-btn { display: none; }
+      .write-here, .commitment-input, .date-input {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="byline">A template by <a href="https://rkulidzan.com" target="_blank">Rebekah Kulidzan</a> &nbsp;·&nbsp; rkulidzan.com</div>
+
+    <h1>My Manifesto</h1>
+    <p class="subtitle">A record of what I know to be true about how I work, what I need, and what I will not compromise on.</p>
+
+    <div class="section">
+      <h2>Section 1</h2>
+      <p class="question">What do you need from work to function well?</p>
+      <p class="guidance">Not what sounds good. What is actually true. Think about the environments where you've done your best work — what was present? What drains you when it's missing?</p>
+      <textarea class="write-here" placeholder="Write here..."></textarea>
+    </div>
+
+    <div class="section">
+      <h2>Section 2</h2>
+      <p class="question">What are your non-negotiables?</p>
+      <p class="guidance">The things you will not compromise on, even when the salary is good and the job description is compelling. Name them clearly so you can't quietly forget them when something shiny comes along.</p>
+      <textarea class="write-here" placeholder="Write here..."></textarea>
+    </div>
+
+    <div class="section">
+      <h2>Section 3</h2>
+      <p class="question">What does belonging look like for you?</p>
+      <p class="guidance">Think about the best team or environment you've been part of. What made it work? What does it feel like when you can show up as yourself, and how do you recognise when you can't?</p>
+      <textarea class="write-here" placeholder="Write here..."></textarea>
+    </div>
+
+    <div class="section">
+      <h2>Section 4</h2>
+      <p class="question">What is your thread?</p>
+      <p class="guidance">Not the narrative on your CV. The real one. What have you actually been chasing across your career? If you stripped away the titles and the companies, what is the thing you keep coming back to?</p>
+      <textarea class="write-here" placeholder="Write here..."></textarea>
+    </div>
+
+    <div class="section">
+      <h2>Section 5</h2>
+      <p class="question">What do you commit to yourself?</p>
+      <p class="guidance">A small set of promises. Write them as commitments, not aspirations. Things you will actually do, not things you hope to do.</p>
+      <div class="commitments-list">
+        <div class="commitment-row"><span class="commitment-num">1.</span><input class="commitment-input" type="text" placeholder="I will..."></div>
+        <div class="commitment-row"><span class="commitment-num">2.</span><input class="commitment-input" type="text" placeholder="I will..."></div>
+        <div class="commitment-row"><span class="commitment-num">3.</span><input class="commitment-input" type="text" placeholder="I will..."></div>
+        <div class="commitment-row"><span class="commitment-num">4.</span><input class="commitment-input" type="text" placeholder="I will..."></div>
+        <div class="commitment-row"><span class="commitment-num">5.</span><input class="commitment-input" type="text" placeholder="I will..."></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Written</h2>
+      <div class="date-row">
+        <span class="date-label">Date:</span>
+        <input class="date-input" type="text" placeholder="Month, Year">
+      </div>
+      <p class="guidance" style="margin-top: 18px;">Update the date each time you revisit and revise this document.</p>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Save as PDF / Print</button>
+
+    <div class="footer">
+      Template by <a href="https://rkulidzan.com" target="_blank">Rebekah Kulidzan</a> &nbsp;·&nbsp;
+      From the post <a href="https://rkulidzan.com/blog/" target="_blank">The Manifesto</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/rkulidzan/" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+      <a href="https://x.com/rkulidzan" target="_blank">X</a>
+    </div>
+
+  </div>
+</body>
+</html>
